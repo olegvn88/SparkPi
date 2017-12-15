@@ -19,7 +19,7 @@ public class SparkPiBootApplication {
     @PostConstruct
     public void init() {
         log.info("SparkPi submit jar is: "+properties.getJarFile());
-        if (!SparkContextProvider.init(properties)) {
+        if (!SparkPiContextProvider.init(properties)) {
             // masterURL probably not set,
             // meaning this was likely run outside of oshinko
             System.exit(1);

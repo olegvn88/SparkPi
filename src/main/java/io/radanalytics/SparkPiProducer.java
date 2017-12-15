@@ -10,7 +10,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 
 public class SparkPiProducer implements Serializable {
     public String GetPi(int scale) {
-        JavaSparkContext jsc = SparkContextProvider.getContext();
+        JavaSparkContext jsc = SparkPiContextProvider.getContext();
 
         int n = 100000 * scale;
         List<Integer> l = new ArrayList<Integer>(n);

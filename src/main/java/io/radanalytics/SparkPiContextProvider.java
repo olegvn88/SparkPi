@@ -8,15 +8,15 @@ import org.springframework.stereotype.*;
 
 public class SparkPiContextProvider {
 
-    private static SparkContextProvider INSTANCE = null;
+    private static SparkPiContextProvider INSTANCE = null;
 
     private SparkConf sparkConf;
     private JavaSparkContext sparkContext;
 
-    private SparkContextProvider() {
+    private SparkPiContextProvider() {
     }
 
-    private SparkContextProvider(SparkPiProperties props) {
+    private SparkPiContextProvider(SparkPiProperties props) {
         this.sparkConf = new SparkConf().setAppName("JavaSparkPi");
         this.sparkConf.setJars(new String[]{props.getJarFile()});
         this.sparkContext = new JavaSparkContext(sparkConf);
@@ -25,7 +25,7 @@ public class SparkPiContextProvider {
     public static boolean init(SparkPiProperties props) {
         try {
             if (INSTANCE == null) {
-                INSTANCE = new SparkContextProvider(props);
+                INSTANCE = new SparkPiContextProvider(props);
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
