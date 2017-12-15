@@ -6,7 +6,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.stereotype.*;
 
-public class SparkContextProvider {
+public class SparkPiContextProvider {
 
     private static SparkContextProvider INSTANCE = null;
 
