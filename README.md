@@ -32,27 +32,22 @@ In order to use Jenkins job builder just complete a few simple steps:
 5. To create or update jobs run the script:
     
    **jenkins-jobs update jobs**
+   
+    You have to see the output similar to this one:
 
-You have to see the output similar to this one:
+        INFO:jenkins_jobs.builder:Number of jobs generated:  3
+        INFO:jenkins_jobs.builder:Creating jenkins job oshinko-cli-binary-release-jjb 
+        INFO:jenkins_jobs.builder:Creating jenkins job oshinko-cli-e2e-nightly-jjb
+        INFO:jenkins_jobs.builder:Creating jenkins job oshinko-s2i-e2e-nightly-jjb
+        INFO:jenkins_jobs.cli.subcommand.update:Number of jobs updated: 3
+        INFO:jenkins_jobs.builder:Number of views generated:  2
+        INFO:jenkins_jobs.builder:Creating jenkins view nightly-jjb
+        INFO:jenkins_jobs.builder:Creating jenkins view release-jjb
+        INFO:jenkins_jobs.cli.subcommand.update:Number of views updated: 2
+     
+6. Go to the jenkins page to verify results.
 
-    INFO:jenkins_jobs.builder:Number of jobs generated:  3
-    INFO:jenkins_jobs.builder:Creating jenkins job oshinko-cli-binary-release-jjb 
-    INFO:jenkins_jobs.builder:Creating jenkins job oshinko-cli-e2e-nightly-jjb
-    INFO:jenkins_jobs.builder:Creating jenkins job oshinko-s2i-e2e-nightly-jjb
-    INFO:jenkins_jobs.cli.subcommand.update:Number of jobs updated: 3
-    INFO:jenkins_jobs.builder:Number of views generated:  2
-    INFO:jenkins_jobs.builder:Creating jenkins view nightly-jjb
-    INFO:jenkins_jobs.builder:Creating jenkins view release-jjb
-    INFO:jenkins_jobs.cli.subcommand.update:Number of views updated: 2
- 
- 
- 
-sdsdsdssdss 
- 
-6.Go to the jenkins page to verify results.
-
-
-   **Additional options:**
+    **Additional options:**
     
   * To delete a specific job, run: 
     
