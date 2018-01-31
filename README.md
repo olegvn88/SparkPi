@@ -51,11 +51,11 @@ In order to use Jenkins job builder just complete a few simple steps:
     
   * To delete a specific job, run: 
     
-    > **jenkins-jobs delete \<jobName>**
+    > jenkins-jobs delete \<jobName>
     
   * To delete all jobs, run: 
  
-    > **jenkins-jobs delete-all -j**
+    > jenkins-jobs delete-all -j
     
   * To delete all views, run: 
     
