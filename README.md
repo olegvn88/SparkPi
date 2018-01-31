@@ -3,7 +3,7 @@ In order to use Jenkins job builder just complete a few simple steps:
 
 1. Install Jenkins job builder on your local machine: 
 
-    **sudo pip install jenkins-job-builder**
+    >**sudo pip install jenkins-job-builder**
 
 2. Create directory **/etc/jenkins_jobs/** on the local machine and put there **jenkins_jobs.ini** file with the next parameters:
   
@@ -27,11 +27,11 @@ In order to use Jenkins job builder just complete a few simple steps:
 
 4. (Optionally) You can run the job builder in test mode, to make sure that yaml files don't have mistakes 
 
-   **jenkins-jobs test jobs**
+   >**jenkins-jobs test jobs**
 
 5. To create or update jobs run the script:
     
-   **jenkins-jobs update jobs**
+   >**jenkins-jobs update jobs**
    
     You have to see the output similar to this one:
 
@@ -51,11 +51,11 @@ In order to use Jenkins job builder just complete a few simple steps:
     
   * To delete a specific job, run: 
     
-    > jenkins-jobs delete \<jobName>
+    >**jenkins-jobs delete \<jobName>**
     
   * To delete all jobs, run: 
  
-    > jenkins-jobs delete-all -j
+    >**jenkins-jobs delete-all -j**
     
   * To delete all views, run: 
     
