@@ -17,8 +17,8 @@ In order to use Jenkins job builder just complete a few simple steps:
            
        [jenkins]
        user=<jenkinsUsername>
-       password=<jenkinsUserApiToken> # Go to http://grid2.et.eng.bos.redhat.com/me/configure and click Show API token to get it
-       url=http://grid2.et.eng.bos.redhat.com
+       password=<jenkinsUserApiToken> # Go to http://jenkin_home_page/me/configure and click Show API token to get it
+       url=<jenkin_home_page>
        query_plugins_info=False
             
      Set the user, password and url according your settings in Jenkins
