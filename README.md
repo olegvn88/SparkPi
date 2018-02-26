@@ -1,6 +1,12 @@
-####How to run tests on a local PC
+**How to run tests on a local PC**
 
-1. Run sshd service by run the script **sudo systemctl start sshd** and **sudo systemctl enable sshd**. 
+1. Install and run sshd service by run the scripts:
+
+    **sudo dnf install -y openssh-server** - to install
+    
+    **sudo systemctl start sshd** - to run ssh service
+    
+    **sudo systemctl enable sshd** - to add sshd to startup
  
 2. Run **oc cluster up --public-hostname <IP_address_of_your_pc> --routing-suffix api.<IP_address_of_your_pc>.nip.io**
 
