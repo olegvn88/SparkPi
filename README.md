@@ -7,12 +7,18 @@
     **sudo systemctl start sshd** - to run ssh service
     
     **sudo systemctl enable sshd** - to add sshd to startup
+   
+2. To copy ssh key to the project, run **cat .ssh/id_rsa > <project_directory>/<path_to_private_key>**
  
-2. Run **oc cluster up --public-hostname <IP_address_of_your_pc> --routing-suffix api.<IP_address_of_your_pc>.nip.io**
+2. To start openshift cluster, run **oc cluster up --public-hostname <IP_address_of_your_pc> --routing-suffix api.<IP_address_of_your_pc>.nip.io**
 
-3. Create project in openshift, run **oc new-project \<projectName>**  
+3. Login to openshift by run:
+    
+    **oc login -u <openshift_user_name> -p <openshift_user_name>**
+    
+4. Create a new project in openshift, run: **oc new-project \<projectName>**  
 
-4. Create **test.properties** file in project directory and put there this text:
+4. Create **test.properties** file in project directory and put there the text:
 
         #openshift user
         xtf.config.master.username=<openshift_user_name>
@@ -27,6 +33,6 @@
         #ssh credentials
         xtf.config.nfs.ssh_username=<user_name>
         xtf.config.master.ssh_username=<user_name>
-        xtf.config.master.ssh_key_path=keys/daikon
+        xtf.config.master.ssh_key_path=<path_to_private_key>
 
-5. Run tests.
+5. Go to the project directory and run the **mvn test** command to run tests.
